@@ -13,10 +13,15 @@ tidy.txt: the clean data file contains the average of each variable for each act
 === Code ===
 
 The R code "run_analysis" does the following:
+
 1. Reads the data collected from the accelerometers from the Samsung Galaxy S smartphone for the UCI data repository (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones);
+
 2. Mark the variables in the data frame with their names (details can be found in the "Data" section below);
+
 3. Extracts only the measurements on the mean and standard deviation for each measurement;
+
 4. Calculate the average of each variable for each activity and each subject and put them in a new data set;
+
 5. Write the created data set to a text file "tidy.txt".
 
 Note: the code assumes that the data files are located in "data//UCI_HAR_Dataset" in the current work directory.
@@ -62,83 +67,164 @@ std(): Standard deviation
 The variables in the processed data ("tidy.txt") are:
 
 "Subject": Subject id; integer; the value ranges from 1 to 30
+
 "Activity": Name of activity; character; the values are: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+
 "tBodyAcc.mean...X": average of mean of X component of body acceleration signals; numerical;  
+
 "tBodyAcc.mean...Y": average of mean of Y component of body acceleration signals; numerical;
+
 "tBodyAcc.mean...Z": average of mean of Z component of body acceleration signals; numerical;
+
 "tBodyAcc.std...X": average of standard deviation of X component of body acceleration signals;; numerical;
+
 "tBodyAcc.std...Y": average of standard deviation of Y component of body acceleration signals;; numerical;
+
 "tBodyAcc.std...Z": average of standard deviation of Z component of body acceleration signals;; numerical;
+
 "tGravityAcc.mean...X": average of mean of X component of gravity acceleration signals; numerical;
+
 "tGravityAcc.mean...Y": average of mean of Y component of gravity acceleration signals; numerical;
+
 "tGravityAcc.mean...Z": average of mean of Z component of gravity acceleration signals; numerical;
+
 "tGravityAcc.std...X": average of standard deviation of X component of gravity acceleration signals; numerical;
+
 "tGravityAcc.std...Y": average of standard deviation of Y component of gravity acceleration signals; numerical;
+
 "tGravityAcc.std...Z": average of standard deviation of Z component of gravity acceleration signals; numerical;
+
 "tBodyAccJerk.mean...X": average of mean of X component of body acceleration Jerk signals; numerical;
+
 "tBodyAccJerk.mean...Y": average of mean of Y component of body acceleration Jerk signals; numerical;
+
 "tBodyAccJerk.mean...Z": average of mean of Z component of body acceleration Jerk signals; numerical;
+
 "tBodyAccJerk.std...X": average of standard deviation of X component of body acceleration Jerk signals; numerical;
+
 "tBodyAccJerk.std...Y": average of standard deviation of Y component of body acceleration Jerk signals; numerical;
+
 "tBodyAccJerk.std...Z": average of standard deviation of Z component of body acceleration Jerk signals; numerical;
+
 "tBodyGyro.mean...X": average of mean of X component of angular velocity signals; numerical;
+
 "tBodyGyro.mean...Y": average of mean of Y component of angular velocity signals; numerical;
+
 "tBodyGyro.mean...Z": average of mean of Z component of angular velocity signals; numerical;
+
 "tBodyGyro.std...X": average of standard deviation of X component of angular velocity signals; numerical; 
+
 "tBodyGyro.std...Y": average of standard deviation of Y component of angular velocity signals; numerical; 
+
 "tBodyGyro.std...Z": average of standard deviation of Z component of angular velocity signals; numerical;
+
 "tBodyGyroJerk.mean...X": average of mean of X component of angular velocity Jerk signals; numerical; 
+
 "tBodyGyroJerk.mean...Y": average of mean of Y component of angular velocity Jerk signals; numerical; 
+
 "tBodyGyroJerk.mean...Z": average of mean of Z component of angular velocity Jerk signals; numerical;
+
 "tBodyGyroJerk.std...X": average of standard deviation of X component of angular velocity Jerk signals; numerical; 
+
 "tBodyGyroJerk.std...Y": average of standard deviation of Y component of angular velocity Jerk signals; numerical; 
+
 "tBodyGyroJerk.std...Z": average of standard deviation of Z component of angular velocity Jerk signals; numerical; 
+
 "tBodyAccMag.mean..": average of mean of magnitude of body acceleration signals;; numerical; 
+
 "tBodyAccMag.std..": average of standard deviation of magnitude of body acceleration signals;; numerical; 
+
 "tGravityAccMag.mean.." average of mean of magnitude of gravity acceleration signals;; numerical;
+
 "tGravityAccMag.std..": average of standard deviation of magnitude of gravity acceleration signals;; numerical; 
+
 "tBodyAccJerkMag.mean..": average of mean of magnitude of body acceleration Jerk signals; numerical; 
+
 "tBodyAccJerkMag.std..": average of standard deviation of magnitude of body acceleration Jerk signals;; numerical; 
+
 "tBodyGyroMag.mean..": average of mean of magnitude of angular velocity signals; numerical; 
+
 "tBodyGyroMag.std..": average of standard deviation of magnitude of angular velocity signals; numerical; 
+
 "tBodyGyroJerkMag.mean..": average of mean of magnitude of angular velocity Jerk signals; numerical; 
+
 "tBodyGyroJerkMag.std..": average of standard deviation of magnitude of angular velocity Jerk signals; numerical; 
+
 "fBodyAcc.mean...X": average of mean of X component of body acceleration signals in frequency domain; numerical; 
+
 "fBodyAcc.mean...Y": average of mean of X component of body acceleration signals in frequency domain; numerical; 
+
 "fBodyAcc.mean...Z": average of mean of X component of body acceleration signals in frequency domain; numerical; 
+
 "fBodyAcc.std...X": average of standard deviation of X component of body acceleration signals in frequency domain; numerical; 
+
 "fBodyAcc.std...Y": average of standard deviation of Y component of body acceleration signals in frequency domain; numerical; 
+
 "fBodyAcc.std...Z": average of standard deviation of Z component of body acceleration signals in frequency domain; numerical; 
+
 "fBodyAcc.meanFreq...X": average of mean frequency of X component of body acceleration signals; numerical; 
+
 "fBodyAcc.meanFreq...Y": average of mean frequency of Y component of body acceleration signals; numerical;
+
 "fBodyAcc.meanFreq...Z": average of mean frequency of Z component of body acceleration signals; numerical;
+
 "fBodyAccJerk.mean...X": average of mean of X component of body acceleration Jerk signals in frequency domain; numerical;
+
 "fBodyAccJerk.mean...Y": average of mean of Y component of body acceleration Jerk signals in frequency domain; numerical; 
+
 "fBodyAccJerk.mean...Z": average of mean of Z component of body acceleration Jerk signals in frequency domain; numerical; 
+
 "fBodyAccJerk.std...X": average of standard deviation of X component of body acceleration Jerk signals in frequency domain; numerical; 
+
 "fBodyAccJerk.std...Y": average of standard deviation of Y component of body acceleration Jerk signals in frequency domain; numerical; 
+
 "fBodyAccJerk.std...Z": average of standard deviation of Z component of body acceleration Jerk signals in frequency domain; numerical; 
+
 "fBodyAccJerk.meanFreq...X": average of mean frequency of X component of body acceleration Jerk signals; numerical; 
+
 "fBodyAccJerk.meanFreq...Y": average of mean frequency of Y component of body acceleration Jerk signals; numerical; 
+
 "fBodyAccJerk.meanFreq...Z": average of mean frequency of Z component of body acceleration Jerk signals; numerical; 
+
 "fBodyGyro.mean...X": average of mean of X component of angular velocity signals in frequency domain; numerical;
+
 "fBodyGyro.mean...Y": average of mean of Y component of angular velocity signals in frequency domain; numerical; 
+
 "fBodyGyro.mean...Z": average of mean of Z component of angular velocity signals in frequency domain; numerical; 
+
 "fBodyGyro.std...X": average of std of X component of angular velocity signals in frequency domain; numerical; 
+
 "fBodyGyro.std...Y": average of std of Y component of angular velocity signals in frequency domain; numerical; 
+
 "fBodyGyro.std...Z": average of std of Z component of angular velocity signals in frequency domain; numerical; 
+
 "fBodyGyro.meanFreq...X": average of mean frequency of X component of angular velocity signals; numerical; 
+
 "fBodyGyro.meanFreq...Y": average of mean frequency of Y component of angular velocity signals; numerical; 
+
 "fBodyGyro.meanFreq...Z": average of mean frequency of Z component of angular velocity signals; numerical; 
+
 "fBodyAccMag.mean..": average of mean of magnitude of body acceleration signals in frequency domain; numerical;
+
 "fBodyAccMag.std..": average of std of magnitude of body acceleration signals in frequency domain; numerical; 
+
 "fBodyAccMag.meanFreq..": average of mean frequency of magnitude of body acceleration signals; numerical; 
+
 "fBodyBodyAccJerkMag.mean..": average of mean of magnitude of body acceleration Jerk signals in frequency domain; numerical; 
+
 "fBodyBodyAccJerkMag.std..": average of std of magnitude of body acceleration Jerk signals in frequency domain; numerical; 
+
 "fBodyBodyAccJerkMag.meanFreq..": : average of mean frequency of magnitude of body acceleration Jerk signals in frequency domain; numerical; 
+
 "fBodyBodyGyroMag.mean..": average of mean of magnitude of angular velocity signals in frequency domain; numerical; 
+
 "fBodyBodyGyroMag.std..": average of std of magnitude of angular velocity signals in frequency domain; numerical; 
+
 "fBodyBodyGyroMag.meanFreq..": average of mean frequency of magnitude of angular velocity signals in frequency domain; numerical; 
+
 "fBodyBodyGyroJerkMag.mean..": average of mean of magnitude of angular velocity Jerk signals in frequency domain; numerical; 
+
 "fBodyBodyGyroJerkMag.std..": average of mean of magnitude of angular velocity Jerk signals in frequency domain; numerical; 
+
 "fBodyBodyGyroJerkMag.meanFreq..": average of mean of magnitude of angular velocity Jerk signals in frequency domain; numerical;
+
